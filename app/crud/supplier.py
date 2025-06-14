@@ -33,3 +33,6 @@ def delete_supplier(db: Session, supplier_id: SupplierCreate):
         obj.is_active = False
         db.commit()
         return obj
+
+def get_all(db:Session):
+    return db.query(SupplierModel).filter(SupplierModel.is_active == True).all()

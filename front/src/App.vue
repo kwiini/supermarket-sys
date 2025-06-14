@@ -4,11 +4,11 @@ import Sidebar from './components/Sidebar.vue';
 </script>
 
 <template>
-  <div id="app" class="flex flex-col">
+  <div id="app" class="flex flex-col h-screen">
     <Navbar />
-    <div class="flex flex-row mt-4 px-2">
+    <div class="flex flex-row flex-1 mt-4 overflow-hidden">
       <Sidebar />
-      <div class="flex-1 px-5 py-2">
+      <div class="flex-1 overflow-auto px-5 py-2">
         <router-view />
       </div>
     </div>
@@ -17,8 +17,10 @@ import Sidebar from './components/Sidebar.vue';
 
 <style scoped>
 #app {
-  height: 98vh;
+  min-height: 100vh;
   background: linear-gradient(to right, #a7f3d0 , #d1fae5, #f0fdf4);
 }
 </style>
+
+
 

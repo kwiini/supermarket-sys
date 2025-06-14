@@ -18,3 +18,6 @@ def delete_sale(db: Session, sale_id: str):
         db.delete(obj)
         db.commit()
     return obj
+
+def get_all(db:Session):
+    return db.query(SaleModel).all()

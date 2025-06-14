@@ -1,13 +1,16 @@
 <template>
-  <el-aside class="w-[13%] mx-2 shadow-none bg-transparent p-4">
-    <el-menu class="space-y-5" router background-color="transparent">
+  <el-aside class="w-[13%] mx-2 shadow-none bg-transparent p-3">
+    <el-menu class="space-y-5" router background-color="transparent" :default-active="$route.path">
       <el-menu-item index="/" class="custom-item">首页</el-menu-item>
-      <el-menu-item index="/members" class="custom-item">会员管理</el-menu-item>
-      <el-menu-item index="/products" class="custom-item">产品管理</el-menu-item>
-      <el-menu-item index="/sales" class="custom-item">销售管理</el-menu-item>
-      <el-menu-item index="/purchases" class="custom-item">采购管理</el-menu-item>
+      <el-menu-item index="/employee" class="custom-item">员工管理</el-menu-item>
       <el-menu-item index="/suppliers" class="custom-item">供应商管理</el-menu-item>
+      <el-menu-item index="/members" class="custom-item">会员管理</el-menu-item>
       <el-menu-item index="/inventory" class="custom-item">库存管理</el-menu-item>
+      <el-menu-item index="/sales" class="custom-item">销售管理</el-menu-item>
+      <el-menu-item index="/salesDetail" class="custom-item">销售明细管理</el-menu-item>
+      <el-menu-item index="/products" class="custom-item">商品管理</el-menu-item>
+      <el-menu-item index="/purchases" class="custom-item">采购管理</el-menu-item>
+
     </el-menu>
   </el-aside>
 </template>

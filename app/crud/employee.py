@@ -25,7 +25,7 @@ def create_employee(db: Session, employee: EmployeeCreate):
         obj = EmployeeModel(**employee.dict())
         db.add(obj)
         db.commit()
-        return {"message": "添加成功"}
+        return obj
 
 def delete_employee(db: Session, employee_id: str):
 
@@ -36,3 +36,6 @@ def delete_employee(db: Session, employee_id: str):
     db.commit()
     db.refresh(obj)
     return obj
+
+def get_all(db:Session):
+    return db.query(EmployeeModel).filter(EmployeeModel.is_active == True).all()

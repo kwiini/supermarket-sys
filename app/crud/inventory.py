@@ -18,3 +18,6 @@ def delete_inventory(db: Session, inventory_id: str):
         db.delete(obj)
         db.commit()
     return obj
+
+def get_all(db:Session):
+    return db.query(InventoryModel).all()

@@ -1,5 +1,5 @@
 #销售
-from sqlalchemy import Column, String, DateTime, DECIMAL, Enum, ForeignKey, Index
+from sqlalchemy import Column, String, Date, DECIMAL, Enum, ForeignKey, Index
 from app.database import Base
 
 class Sale(Base):
@@ -7,7 +7,7 @@ class Sale(Base):
 
     sale_id = Column(String(20), primary_key=True, index=True)
     member_id = Column(String(20), ForeignKey("member.member_id"))
-    sale_date = Column(DateTime, nullable=False)
+    sale_date = Column(Date, nullable=False)
     total_amount = Column(DECIMAL(10, 2), nullable=False)
     discount_amount = Column(DECIMAL(10, 2), default=0)
     payment_method = Column(Enum("现金", "信用卡", "移动支付"), nullable=False)

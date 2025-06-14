@@ -18,3 +18,6 @@ def delete_member(db: Session, member_id: str):
         db.delete(db_obj)
         db.commit()
     return db_obj
+
+def get_all(db:Session):
+    return db.query(MemberModel).all()

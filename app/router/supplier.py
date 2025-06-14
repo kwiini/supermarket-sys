@@ -21,3 +21,6 @@ def create(data:schemas.SupplierCreate, db:Session = Depends((get_db))):
 def delete(supplier_id:str, db:Session = Depends((get_db))):
     return crud.delete_supplier(db, supplier_id)
 
+@router.get("/", response_model=list[schemas.Supplier])
+def getAll(db:Session = Depends(get_db)):
+    return crud.get_all(db)

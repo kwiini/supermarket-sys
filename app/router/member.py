@@ -22,3 +22,7 @@ def read(member_id: str, db: Session = Depends(get_db)):
 @router.delete("/{member_id}", deprecated=True)
 def delete(member_id: str, db: Session = Depends(get_db)):
     return crud.delete_member(db, member_id)
+
+@router.get("/", response_model=list[schemas.Member])
+def getAll(db:Session = Depends(get_db)):
+    return crud.get_all(db)

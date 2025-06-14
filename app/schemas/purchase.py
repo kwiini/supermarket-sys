@@ -15,4 +15,4 @@ class PurchaseCreate(PurchaseBase):
 
 class Purchase(PurchaseCreate):
     class Config:
-        orm_mode = True
+        from_attributes = True

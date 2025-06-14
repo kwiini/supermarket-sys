@@ -32,3 +32,6 @@ def delete_product(db: Session, product_id: str):
     obj.status = '下架'
     db.commit()
     return obj
+
+def get_all(db:Session):
+    return db.query(ProductModel).filter(ProductModel.status == '在售').all()

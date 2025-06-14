@@ -12,4 +12,4 @@ class SaleDetailCreate(SaleDetailBase):
 
 class SaleDetail(SaleDetailCreate):
     class Config:
-        orm_mode = True
+        from_attributes = True

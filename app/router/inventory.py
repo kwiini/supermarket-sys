@@ -20,3 +20,7 @@ def read(inventory_id: str, db: Session = Depends(get_db)):
 @router.delete("/{inventory_id}")
 def delete(inventory_id: str, db: Session = Depends(get_db)):
     return crud.delete_inventory(db, inventory_id)
+
+@router.get("/", response_model=list[schemas.Inventory])
+def getAll(db:Session = Depends(get_db)):
+    return crud.get_all(db)

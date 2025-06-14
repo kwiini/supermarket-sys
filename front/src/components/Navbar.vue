@@ -22,11 +22,4 @@
   background-color: #34d399;
   color: white;
 }
-
-/* 响应式 */
-@media (max-width: 768px) {
-  .el-header {
-    padding: 10px;
-  }
-}
 </style>
