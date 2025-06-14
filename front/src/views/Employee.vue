@@ -15,6 +15,13 @@ const openAddDialog = () => {
   dialogRef.value.open();
 };
 
+const employeeOptions = computed(() =>
+  store.employee.map(e => ({
+    label: `${e.employee_id} - ${e.name}`,
+    value: e.employee_id,
+  }))
+);
+
 const employeeSchema: FieldSchema[] = [
   { label: '姓名', prop: 'name', type: 'input' },
   { label: '职位', prop: 'position', type: 'input' },
@@ -22,7 +29,17 @@ const employeeSchema: FieldSchema[] = [
   { label: '邮箱', prop: 'email', type: 'input', attrs: { placeholder: 'example@company.com' } },
   { label: '入职日期', prop: 'hire_date', type: 'date', attrs: { placeholder: '选择日期'} },
   { label: '薪水', prop: 'salary', type: 'input', attrs: { type: 'number', min: 0 } },
-  { label: '上级经理编号', prop: 'manager_id', type: 'input' },
+  {
+    label: '上级经理编号',
+    prop: 'manager_id',
+    type: 'select',
+    attrs: {
+      placeholder: '请选择商品',
+      get options() {
+        return employeeOptions.value;
+      }
+    },
+  },
   { label: '员工编号', prop: 'employee_id', type: 'input' },
 ];
 
