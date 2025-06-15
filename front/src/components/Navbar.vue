@@ -1,10 +1,10 @@
 <template>
   <el-header class="shadow-lg h-18">
     <div class="flex justify-between items-center h-full px-1">
-      <h1 class="text-3xl font-semibold text-green-600">超超批发系统</h1>
-      <ElButton class="bg-white text-green-600 hover:bg-green-600 hover:text-white border-none rounded-lg transition-colors duration-300">
+      <h1 class="text-3xl font-semibold text-green-600">超市后台管理系统</h1>
+      <!-- <ElButton class="bg-white text-green-600 hover:bg-green-600 hover:text-white border-none rounded-lg transition-colors duration-300">
         登出
-      </ElButton>
+      </ElButton> -->
     </div>
   </el-header>
 </template>

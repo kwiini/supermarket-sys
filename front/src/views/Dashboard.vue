@@ -6,13 +6,13 @@ const currentTime = ref('');
 const greeting = computed(() => {
   const hour = new Date().getHours();
   if (hour < 6 && hour >= 1) {
-    return '好';
+    return '凌晨好';
   }
   if (hour < 11 && hour >= 6) {
     return '早上好';
   }
   if (hour < 15 && hour >= 11) {
-    return '早上好';
+    return '中午好';
   }
   if (hour < 18 && hour >= 15) {
     return '下午好';
@@ -68,7 +68,7 @@ const updateStatistics = () => {
       class="text-xl text-white flex items-center justify-between shadow-lg px-6 rounded-lg"
       style="height: 64px; background: radial-gradient(circle at top left, #34d399, #10b981, #059669);"
     >
-      <h3 class="font-bold tracking-wide">{{ greeting }}，欢迎使用超超批发系统</h3>
+      <h3 class="font-bold tracking-wide">{{ greeting }}，欢迎使用超市后台管理系统</h3>
       <div class="text-sm">{{ currentTime }}</div>
     </el-header>
 
