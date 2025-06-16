@@ -34,7 +34,7 @@ const employeeSchema: FieldSchema[] = [
     prop: 'manager_id',
     type: 'select',
     attrs: {
-      placeholder: '请选择商品',
+      placeholder: '请选择上级经理',
       get options() {
         return employeeOptions.value;
       }

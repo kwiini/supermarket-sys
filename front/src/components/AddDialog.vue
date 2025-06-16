@@ -92,7 +92,6 @@ defineExpose({ open });
         :prop="item.prop"
         class="mb-4"
       >
-        <!-- 动态组件渲染 -->
         <component
           :is="getComponent(item.type)"
           v-model="formData[item.prop]"
@@ -101,7 +100,6 @@ defineExpose({ open });
           :placeholder="item.attrs?.placeholder || `请输入${item.label}`"
           :clearable="true"
         >
-          <!-- select 选项 -->
           <el-option
             v-if="item.type === 'select' && item.attrs?.options"
             v-for="option in item.attrs.options"
